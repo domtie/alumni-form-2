@@ -31,7 +31,7 @@ export default function Home() {
   const [formData, setFormData] = useState<Partial<RegistrationData>>({});
 
   const handleBasicInfoSubmit = (data: any) => {
-    setFormData((prev) => ({ ...prev, ...data }));
+    setFormData((prev: any) => ({ ...prev, ...data }));
     setStep(2);
   };
 
@@ -68,9 +68,9 @@ export default function Home() {
 
         {step === 2 && (
           <InvolvementTypeStep
-            onNext={handleInvolvementTypeSelect}
-            defaultValue={formData.involvementType}
-            onBack={handleBack}
+              onNext={handleInvolvementTypeSelect}
+              defaultValue={formData.involvementType ?? undefined}
+              onBack={handleBack}
           />
         )}
 
