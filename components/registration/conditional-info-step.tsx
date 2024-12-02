@@ -219,10 +219,10 @@ export function ConditionalInfoStep({
                     className="z-10"
                   />
                   <div className="absolute -top-2 left-0 w-full flex justify-between">
-                    <div className="w-6 h-6 rounded-full bg-background flex items-center justify-center text-xs">
+                    <div className="w-6 h-6 rounded-full bg-background border-2 border-primary flex items-center justify-center text-xs">
                       {form.watch('startYear') || 2024}
                     </div>
-                    <div className="w-6 h-6 bg-background border-primary flex items-center justify-center text-xs">
+                    <div className="w-6 h-6 rounded-full bg-background border-2 border-primary flex items-center justify-center text-xs">
                       {form.watch('endYear') || 2025}
                     </div>
                   </div>
