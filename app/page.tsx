@@ -28,8 +28,8 @@ const registrationSteps: RegistrationStep[] = [
 
 export default function Home() {
   const [step, setStep] = useState(1);
-  const [formData, setFormData] = useState<Partial<RegistrationData>>({});
-
+  const [formData, setFormData] = useState<Partial<Omit<RegistrationData, 'involvementType'>> & { involvementType?: InvolvementType }>({});
+  
   const handleBasicInfoSubmit = (data: any) => {
     setFormData((prev: any) => ({ ...prev, ...data }));
     setStep(2);
